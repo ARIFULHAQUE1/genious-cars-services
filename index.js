@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000;
       const authHeaders= req.headers.authorization;
    
       if(!authorization){
-            // return res.status(401).send({messge:'unAuthorazie Access'})
+            return res.status(401).send({messge:'unAuthorazie Access'})
       }
       next();
       console.log('inside jwt verify',authHeaders);
